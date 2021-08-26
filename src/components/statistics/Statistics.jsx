@@ -5,8 +5,9 @@ function Statistics(props) {
   return (
     <div className="container">
       <section className={styles.statistics}>
-        <h2 className="title">{title}</h2>
-  
+        {title.length > 0 &&
+          <h2 className="title">{title}</h2>
+        }
         <ul className={styles.statlist}>
           {stats.map(stat => ( 
             <li key={stat.id} className="item">
